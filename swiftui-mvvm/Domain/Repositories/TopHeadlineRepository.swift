@@ -9,5 +9,5 @@
 import Combine
 
 protocol TopHeadlineRepository {
-    func headlineList(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error>
+    func headlineList(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage?, Error>
 }

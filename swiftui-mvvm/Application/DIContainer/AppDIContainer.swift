@@ -12,14 +12,18 @@ import SwiftUI
 // MARK: - Define all sub-container 
 protocol AppDIContainerType {
     var newsDIContainer: NewsDIContainerType { get }
+    var dataService: DataService { get }
 }
 
 final class AppDIContainer: AppDIContainerType {
     
     lazy var newsDIContainer: NewsDIContainerType = {
-        return NewsDIContainer()
+        return NewsDIContainer(dataService: self.dataService)
     }()
     
+    lazy var dataService: DataService = {
+        return UserDefaultStorage.shared
+    }()
 }
 
 // MARK: - EnvironmentKey exposure

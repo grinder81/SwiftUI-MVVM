@@ -14,7 +14,7 @@ import Combine
 // 3. Repository isolate or abstract source of the response
 
 protocol FetchTopHeadlineQueriesUseCase {
-    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error>
+    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage?, Error>
 }
 
 final class DefaultFetchTopHeadlineQueriesUseCase: FetchTopHeadlineQueriesUseCase {
@@ -28,7 +28,7 @@ final class DefaultFetchTopHeadlineQueriesUseCase: FetchTopHeadlineQueriesUseCas
     // We can do more here like:
     // Error handling for only this use case
     // Mapping data to something or more 
-    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error> {
+    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage?, Error> {
         return self.topHeadlineRepository.headlineList(for: query)
     }
     

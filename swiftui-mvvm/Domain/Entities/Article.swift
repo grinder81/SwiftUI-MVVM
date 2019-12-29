@@ -26,7 +26,7 @@ extension Article: Hashable {
     }
 }
 
-struct ArticlePage: Identifiable {
+struct ArticlePage: Identifiable, Codable {
     let id = UUID()
     let totalResults: Int
     let articles: [Article]

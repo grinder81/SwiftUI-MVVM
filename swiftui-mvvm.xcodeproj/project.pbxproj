@@ -31,6 +31,8 @@
 		F82C3C1023B5B72F0025C872 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3C0F23B5B72F0025C872 /* AppDIContainer.swift */; };
 		F82C3C1C23B683A30025C872 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3C1B23B683A30025C872 /* LaunchView.swift */; };
 		F8566DE323B7390C00FBF4A4 /* View+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566DE223B7390C00FBF4A4 /* View+Extenstion.swift */; };
+		F862407A23B7FB8900E6D46B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862407923B7FB8900E6D46B /* DataService.swift */; };
+		F862407C23B7FF0B00E6D46B /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862407B23B7FF0B00E6D46B /* UserDefaultStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		F82C3C0F23B5B72F0025C872 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		F82C3C1B23B683A30025C872 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		F8566DE223B7390C00FBF4A4 /* View+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extenstion.swift"; sourceTree = "<group>"; };
+		F862407923B7FB8900E6D46B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F862407B23B7FF0B00E6D46B /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,7 @@
 		F82C3BF323B2C72D0025C872 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F862407123B7F36300E6D46B /* DataLayer */,
 				F82C3C0423B408AC0025C872 /* Network */,
 				F82C3C0123B408640025C872 /* Repositories */,
 			);
@@ -334,6 +339,15 @@
 				F82C3C1B23B683A30025C872 /* LaunchView.swift */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		F862407123B7F36300E6D46B /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F862407923B7FB8900E6D46B /* DataService.swift */,
+				F862407B23B7FF0B00E6D46B /* UserDefaultStorage.swift */,
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +493,7 @@
 				F82C3C0B23B47F8A0025C872 /* APIError.swift in Sources */,
 				F82C3BFE23B321A00025C872 /* TopHeadlineQuery.swift in Sources */,
 				F82C3C0923B40C1C0025C872 /* Model+Decodable.swift in Sources */,
+				F862407C23B7FF0B00E6D46B /* UserDefaultStorage.swift in Sources */,
 				F8566DE323B7390C00FBF4A4 /* View+Extenstion.swift in Sources */,
 				F82C3C1023B5B72F0025C872 /* AppDIContainer.swift in Sources */,
 				F82C3BB623AFC9FD0025C872 /* SceneDelegate.swift in Sources */,
@@ -486,6 +501,7 @@
 				F82C3C0E23B5B5B20025C872 /* NewsDIContainer.swift in Sources */,
 				F82C3BE823AFCD300025C872 /* NewsViewModel.swift in Sources */,
 				F82C3BB823AFC9FD0025C872 /* NewsView.swift in Sources */,
+				F862407A23B7FB8900E6D46B /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

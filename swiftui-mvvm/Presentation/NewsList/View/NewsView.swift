@@ -15,8 +15,10 @@ struct NewsView: View {
     var body: some View {
         NavigationView {
             List(viewModel.articles, id:\.id) { (article) in
-                Text("\(article.description ?? "")")
-            }
+                NavigationLink(destination: Text("\(article.description ?? "")")) {
+                    Text("\(article.description ?? "")")
+                }
+            }.navigationBarTitle("Top Headlines")
         }.onAppear {
             self.viewModel.onAppear = ()
         }

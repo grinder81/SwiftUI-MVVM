@@ -9,9 +9,10 @@
 import Foundation
 
 protocol APIRequest {
-    associatedtype Response: Decodable
+    associatedtype Response: Codable
     associatedtype Query
     
     var path: String { get }
     var queryItems: [URLQueryItem]? { get }
+    var identifiableKey: String { get }
 }

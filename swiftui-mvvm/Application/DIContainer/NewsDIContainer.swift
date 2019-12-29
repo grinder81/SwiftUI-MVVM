@@ -30,6 +30,13 @@ typealias NewsDIContainerType = NewsDIUseCaseType & NewsDIRepositoryType & NewsD
 
 
 final class NewsDIContainer: NewsDIContainerType {
+    
+    let dataService: DataService
+    
+    init(dataService: DataService) {
+        self.dataService = dataService
+    }
+    
     // MARK: - UseCases
     func makeFetchTopHeadlineQueriesUseCase() -> FetchTopHeadlineQueriesUseCase {
         return DefaultFetchTopHeadlineQueriesUseCase(headlineRepo: self.makeTopHeadlineRepositories())
@@ -37,7 +44,7 @@ final class NewsDIContainer: NewsDIContainerType {
     
     // MARK: - Repositories
     func makeTopHeadlineRepositories() -> TopHeadlineRepository {
-        return DefaultTopHeadlineRepository()
+        return DefaultTopHeadlineRepository(dataService: dataService)
     }
     
     // MARK: - NewsView

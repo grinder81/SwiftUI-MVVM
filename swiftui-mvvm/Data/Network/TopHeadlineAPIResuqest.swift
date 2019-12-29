@@ -21,9 +21,14 @@ struct TopHeadlineAPIRequest: APIRequest {
     var path: String { return "/v2/top-headlines" }
     var queryItems: [URLQueryItem]? {
         var items: [URLQueryItem] = []
+        // FIXME: - apiKey need to handle through env 
         items.append(.init(name: "apiKey", value: "1944816ba04b445c9264dbb74f4e5b32"))
         items.append(contentsOf: query.queryItems)
         return items
+    }
+    
+    var identifiableKey: String {
+        return self.query.key
     }
 }
 
@@ -44,8 +49,12 @@ extension TopHeadlineQuery {
         
         return items
     }
+    
+    var key: String {
+        return country + (category ?? "")
+    }
 }
 
-struct TopHeadlineResponse: Decodable, Hashable {
+struct TopHeadlineResponse: Codable, Hashable {
     var articles: [Article]
 }

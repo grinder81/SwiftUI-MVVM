@@ -35,6 +35,7 @@ final class NewsViewModel: ObservableObject {
             .flatMap { [fetchTopHeadlineQueryUseCase] country -> AnyPublisher<ArticlePage, Never> in
                 return fetchTopHeadlineQueryUseCase.execute(for: TopHeadlineQuery(country: country))
                     .replaceError(with: .init(totalResults: 0, articles: []))
+                    .replaceNil(with: .init(totalResults: 0, articles: []))
                     .eraseToAnyPublisher()
             }
             .map { $0.articles }
