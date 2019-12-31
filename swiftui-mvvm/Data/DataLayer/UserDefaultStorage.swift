@@ -35,6 +35,12 @@ final class UserDefaultStorage: DataService {
         }
         return nil
     }
+    
+    func observeOnce<Model>(type: Model.Type, for key: String) -> AnyPublisher<Model?, Error> where Model: Codable {
+        return Future<Model?, Error> { promise in
+            promise(.success(self.read(type: type, for: key)))
+        }.eraseToAnyPublisher()
+    }
         
 }
 

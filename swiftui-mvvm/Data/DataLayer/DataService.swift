@@ -13,5 +13,7 @@ protocol DataService {
     func save<Model>(model: Model, by key: String) where Model: Codable
     func read<Model>(type: Model.Type, for key: String) -> Model? where Model: Codable
     
-    //func observe<Model, Request>(for request: Request) -> AnyPublisher<Model, Never> where Model: Codable, Request: DataRequest
+    // This is just generating publisher to execute read async
+    // to do real observe, we need KVO with data source 
+    func observeOnce<Model>(type: Model.Type, for key: String) -> AnyPublisher<Model?, Error> where Model: Codable
 }
