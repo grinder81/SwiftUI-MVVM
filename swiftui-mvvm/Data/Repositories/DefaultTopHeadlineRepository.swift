@@ -23,7 +23,7 @@ final class DefaultTopHeadlineRepository: APIServiceType {
         self.urlSession  = urlSession
     }
 
-    func response<Request>(from request: Request) -> AnyPublisher<Request.Response, Error> where Request : APIRequest {
+    func response<Request>(from request: Request) -> AnyPublisher<Request.Response, Error> where Request : APIRequestType {
         
         // Path + Component
         guard let pathUrl = URL(string: request.path, relativeTo: baseUrl) else {
@@ -75,13 +75,13 @@ extension DefaultTopHeadlineRepository: TopHeadlineRepository {
         let apiSignal = self.response(from: request)
             .map { ArticlePage(totalResults: $0.articles.count, articles: $0.articles)}
             .handleEvents(receiveOutput: { (response) in
-                self.dataService.save(model: response, by: request.identifiableKey)
+                self.dataService.save(model: response, by: request.cacheKey)
             })
             .eraseToAnyPublisher()
         
         // This is just once executing
         let cacheSignal = self.dataService
-            .observeOnce(type: ArticlePage.self, for: request.identifiableKey)
+            .observeOnce(type: ArticlePage.self, for: request.cacheKey)
             .replaceNil(with: .init(totalResults: 0, articles: []))
             .eraseToAnyPublisher()
         

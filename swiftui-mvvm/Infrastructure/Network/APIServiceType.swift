@@ -9,5 +9,5 @@
 import Combine
 
 protocol APIServiceType {
-    func response<Request>(from request: Request) -> AnyPublisher<Request.Response, Error> where Request: APIRequest
+    func response<Request>(from request: Request) -> AnyPublisher<Request.Response, Error> where Request: APIRequestType
 }

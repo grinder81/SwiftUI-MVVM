@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TopHeadlineAPIRequest: APIRequest {
+struct TopHeadlineAPIRequest: APIRequestType {
     typealias Response = TopHeadlineResponse
     typealias Query    = TopHeadlineQuery
     
@@ -27,7 +27,7 @@ struct TopHeadlineAPIRequest: APIRequest {
         return items
     }
     
-    var identifiableKey: String {
+    var cacheKey: String {
         return self.query.key
     }
 }
