@@ -9,17 +9,17 @@
 import Combine
 import Foundation
 
-final class DefaultTopHeadlineRepository: APIService {
+final class DefaultTopHeadlineRepository: APIServiceType {
     
     private let baseUrl: URL
     private let urlSession: URLSession
     private let dataService: DataService
     
-    init(dataService: DataService = UserDefaultStorage.shared,
-         url: String = "https://newsapi.org",
+    init(url: URL = URL(string: "https://newsapi.org")!,
+         dataService: DataService = UserDefaultStorage.shared,
          urlSession: URLSession = .shared) {
         self.dataService = dataService
-        self.baseUrl     = URL(string: url)!
+        self.baseUrl     = url
         self.urlSession  = urlSession
     }
 
@@ -52,12 +52,19 @@ final class DefaultTopHeadlineRepository: APIService {
             .decode(type: Request.Response.self, decoder: decoder)
             .mapError { APIError(error: $0) }
             // DEBUG: activate that line to see cache and API response
-            //.delay(for: 5, scheduler: DispatchQueue.global())
+            .delay(for: 5, scheduler: DispatchQueue.global())
             .subscribe(on: DispatchQueue.global(qos: .background))
             .eraseToAnyPublisher()
     }
     
 }
+
+// This is `D` of the SOLID
+// and it's called dependency inversion
+// We are using repository from domain layer
+// and any use case call this real implementation
+// without knowing what exactly the implementation
+// In clean archiecture that's the inward dependency 
 
 extension DefaultTopHeadlineRepository: TopHeadlineRepository {
     func headlineList(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error> {

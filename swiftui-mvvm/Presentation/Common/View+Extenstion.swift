@@ -12,4 +12,11 @@ extension View {
     func eraseToAnyView() -> AnyView {
         return AnyView(self)
     }
+    
+    func toast(isShowing: Binding<Bool>, text: Text) -> some View {
+        Toast(isShowing: isShowing,
+              presenting: { self },
+              text: text)
+    }
+
 }

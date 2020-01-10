@@ -8,14 +8,28 @@
 
 import Combine
 
-// UseCase will use Repository to:
+// This `S` of SOLID principal
+// Every class should have single responsiblity and a UseCase does
+// solve one just one case. This way we won't put massive class
+// of functionality
+
+// This is also `I` of SOLID principal which is
+// Interface segregation princial
+// In short: we shouldn't have a gaint protocol
+// where we define everything and client's need in many casee.
+// That come the rule of composition. Instead of a gaint
+// protocol A we can seperate A1, A2, A3 and then client
+// can confrim as they need
+protocol FetchTopHeadlineQueriesUseCase {
+    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error>
+}
+
+
+// UseCase will use Repository as dependency to:
 // 1. Get data from API or
 // 2. Get data from cache
 // 3. Repository isolate or abstract source of the response
 
-protocol FetchTopHeadlineQueriesUseCase {
-    func execute(for query: TopHeadlineQuery) -> AnyPublisher<ArticlePage, Error>
-}
 
 final class DefaultFetchTopHeadlineQueriesUseCase: FetchTopHeadlineQueriesUseCase {
     

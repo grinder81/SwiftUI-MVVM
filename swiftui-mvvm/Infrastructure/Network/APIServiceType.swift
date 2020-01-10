@@ -8,6 +8,6 @@
 
 import Combine
 
-protocol APIService {
+protocol APIServiceType {
     func response<Request>(from request: Request) -> AnyPublisher<Request.Response, Error> where Request: APIRequest
 }

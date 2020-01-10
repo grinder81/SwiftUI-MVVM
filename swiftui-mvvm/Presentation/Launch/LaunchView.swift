@@ -12,6 +12,11 @@ struct LaunchView: View {
     
     @Environment(\.appDiContainer) private var appDiContainer
     
+    init() {
+        let config = appDiContainer.appConfigurator
+        print(config.envConfigurator.baseUrl)
+    }
+    
     var body: some View {
         appDiContainer.newsDIContainer.makeNewsView()
     }

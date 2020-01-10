@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8146EAB23C236E5006CB609 /* ApplicationConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146EAA23C236E4006CB609 /* ApplicationConfigurations.swift */; };
+		F8146EAD23C2470E006CB609 /* EnvironmentConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146EAC23C2470E006CB609 /* EnvironmentConfig.swift */; };
+		F8146EB023C27054006CB609 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146EAF23C27054006CB609 /* Bundle.swift */; };
 		F82C3BB423AFC9FD0025C872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BB323AFC9FD0025C872 /* AppDelegate.swift */; };
 		F82C3BB623AFC9FD0025C872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BB523AFC9FD0025C872 /* SceneDelegate.swift */; };
 		F82C3BB823AFC9FD0025C872 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BB723AFC9FD0025C872 /* NewsView.swift */; };
@@ -16,7 +19,7 @@
 		F82C3BCB23AFCA000025C872 /* swiftui_mvvmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BCA23AFCA000025C872 /* swiftui_mvvmTests.swift */; };
 		F82C3BD623AFCA000025C872 /* swiftui_mvvmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BD523AFCA000025C872 /* swiftui_mvvmUITests.swift */; };
 		F82C3BE823AFCD300025C872 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BE723AFCD300025C872 /* NewsViewModel.swift */; };
-		F82C3BF023B2C7090025C872 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BED23B2C7090025C872 /* APIService.swift */; };
+		F82C3BF023B2C7090025C872 /* APIServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BED23B2C7090025C872 /* APIServiceType.swift */; };
 		F82C3BF223B2C7090025C872 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BEF23B2C7090025C872 /* APIRequest.swift */; };
 		F82C3BF823B312700025C872 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BF723B312700025C872 /* Source.swift */; };
 		F82C3BFA23B312810025C872 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3BF923B312810025C872 /* Article.swift */; };
@@ -30,6 +33,8 @@
 		F82C3C0E23B5B5B20025C872 /* NewsDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3C0D23B5B5B20025C872 /* NewsDIContainer.swift */; };
 		F82C3C1023B5B72F0025C872 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3C0F23B5B72F0025C872 /* AppDIContainer.swift */; };
 		F82C3C1C23B683A30025C872 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C3C1B23B683A30025C872 /* LaunchView.swift */; };
+		F84F45A223C3B8E9009D97BC /* envConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = F8146EB123C286F4006CB609 /* envConfig.json */; };
+		F84F45A423C3D199009D97BC /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F45A323C3D198009D97BC /* Toast.swift */; };
 		F8566DE323B7390C00FBF4A4 /* View+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8566DE223B7390C00FBF4A4 /* View+Extenstion.swift */; };
 		F862407A23B7FB8900E6D46B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862407923B7FB8900E6D46B /* DataService.swift */; };
 		F862407C23B7FF0B00E6D46B /* UserDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F862407B23B7FF0B00E6D46B /* UserDefaultStorage.swift */; };
@@ -53,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8146EAA23C236E4006CB609 /* ApplicationConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigurations.swift; sourceTree = "<group>"; };
+		F8146EAC23C2470E006CB609 /* EnvironmentConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentConfig.swift; sourceTree = "<group>"; };
+		F8146EAF23C27054006CB609 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		F8146EB123C286F4006CB609 /* envConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = envConfig.json; sourceTree = "<group>"; };
 		F82C3BB023AFC9FD0025C872 /* swiftui-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82C3BB323AFC9FD0025C872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F82C3BB523AFC9FD0025C872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +77,7 @@
 		F82C3BD523AFCA000025C872 /* swiftui_mvvmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_mvvmUITests.swift; sourceTree = "<group>"; };
 		F82C3BD723AFCA000025C872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F82C3BE723AFCD300025C872 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
-		F82C3BED23B2C7090025C872 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		F82C3BED23B2C7090025C872 /* APIServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceType.swift; sourceTree = "<group>"; };
 		F82C3BEF23B2C7090025C872 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		F82C3BF723B312700025C872 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		F82C3BF923B312810025C872 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 		F82C3C0D23B5B5B20025C872 /* NewsDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDIContainer.swift; sourceTree = "<group>"; };
 		F82C3C0F23B5B72F0025C872 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		F82C3C1B23B683A30025C872 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		F84F45A323C3D198009D97BC /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F8566DE223B7390C00FBF4A4 /* View+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extenstion.swift"; sourceTree = "<group>"; };
 		F862407923B7FB8900E6D46B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F862407B23B7FF0B00E6D46B /* UserDefaultStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultStorage.swift; sourceTree = "<group>"; };
@@ -112,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F8146EA923C236B1006CB609 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F8146EAA23C236E4006CB609 /* ApplicationConfigurations.swift */,
+				F8146EAC23C2470E006CB609 /* EnvironmentConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F8146EAE23C27043006CB609 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F8146EAF23C27054006CB609 /* Bundle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F82C3BA723AFC9FD0025C872 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +168,7 @@
 				F82C3BF323B2C72D0025C872 /* Data */,
 				F82C3BEB23B2C6E90025C872 /* Infrastructure */,
 				F82C3BE423AFCA770025C872 /* Resources */,
+				F8146EAE23C27043006CB609 /* Common */,
 			);
 			path = "swiftui-mvvm";
 			sourceTree = "<group>";
@@ -176,6 +204,7 @@
 			children = (
 				F82C3BB323AFC9FD0025C872 /* AppDelegate.swift */,
 				F82C3BB523AFC9FD0025C872 /* SceneDelegate.swift */,
+				F8146EA923C236B1006CB609 /* Configuration */,
 				F82C3C0C23B5B59A0025C872 /* DIContainer */,
 			);
 			path = Application;
@@ -184,6 +213,7 @@
 		F82C3BE423AFCA770025C872 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F8146EB123C286F4006CB609 /* envConfig.json */,
 				F82C3BB923AFCA000025C872 /* Assets.xcassets */,
 				F82C3BBE23AFCA000025C872 /* LaunchScreen.storyboard */,
 				F82C3BC123AFCA000025C872 /* Info.plist */,
@@ -223,7 +253,7 @@
 		F82C3BEC23B2C7090025C872 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				F82C3BED23B2C7090025C872 /* APIService.swift */,
+				F82C3BED23B2C7090025C872 /* APIServiceType.swift */,
 				F82C3BEF23B2C7090025C872 /* APIRequest.swift */,
 			);
 			path = Network;
@@ -313,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				F8566DE223B7390C00FBF4A4 /* View+Extenstion.swift */,
+				F84F45A323C3D198009D97BC /* Toast.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -456,6 +487,7 @@
 			files = (
 				F82C3BC023AFCA000025C872 /* LaunchScreen.storyboard in Resources */,
 				F82C3BBD23AFCA000025C872 /* Preview Assets.xcassets in Resources */,
+				F84F45A223C3B8E9009D97BC /* envConfig.json in Resources */,
 				F82C3BBA23AFCA000025C872 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82C3BF823B312700025C872 /* Source.swift in Sources */,
+				F8146EB023C27054006CB609 /* Bundle.swift in Sources */,
 				F82C3BB423AFC9FD0025C872 /* AppDelegate.swift in Sources */,
 				F82C3BFA23B312810025C872 /* Article.swift in Sources */,
 				F82C3BF223B2C7090025C872 /* APIRequest.swift in Sources */,
@@ -489,17 +522,20 @@
 				F82C3C0623B40B450025C872 /* TopHeadlineAPIResuqest.swift in Sources */,
 				F82C3BFC23B3216B0025C872 /* TopHeadlineRepository.swift in Sources */,
 				F82C3C1C23B683A30025C872 /* LaunchView.swift in Sources */,
-				F82C3BF023B2C7090025C872 /* APIService.swift in Sources */,
+				F8146EAD23C2470E006CB609 /* EnvironmentConfig.swift in Sources */,
+				F82C3BF023B2C7090025C872 /* APIServiceType.swift in Sources */,
 				F82C3C0B23B47F8A0025C872 /* APIError.swift in Sources */,
 				F82C3BFE23B321A00025C872 /* TopHeadlineQuery.swift in Sources */,
 				F82C3C0923B40C1C0025C872 /* Model+Decodable.swift in Sources */,
 				F862407C23B7FF0B00E6D46B /* UserDefaultStorage.swift in Sources */,
 				F8566DE323B7390C00FBF4A4 /* View+Extenstion.swift in Sources */,
 				F82C3C1023B5B72F0025C872 /* AppDIContainer.swift in Sources */,
+				F8146EAB23C236E5006CB609 /* ApplicationConfigurations.swift in Sources */,
 				F82C3BB623AFC9FD0025C872 /* SceneDelegate.swift in Sources */,
 				F82C3C0023B32CD60025C872 /* FetchTopHeadlineQueriesUseCase.swift in Sources */,
 				F82C3C0E23B5B5B20025C872 /* NewsDIContainer.swift in Sources */,
 				F82C3BE823AFCD300025C872 /* NewsViewModel.swift in Sources */,
+				F84F45A423C3D199009D97BC /* Toast.swift in Sources */,
 				F82C3BB823AFC9FD0025C872 /* NewsView.swift in Sources */,
 				F862407A23B7FB8900E6D46B /* DataService.swift in Sources */,
 			);

@@ -12,16 +12,26 @@ import Combine
 struct NewsView: View {
     @EnvironmentObject private var viewModel: NewsViewModel
     
+    @State private var showToast: Bool = false
+    
     var body: some View {
         NavigationView {
-            List(viewModel.articles, id:\.id) { (article) in
+            List(self.viewModel.articles, id:\.id) { (article) in
                 NavigationLink(destination: Text("\(article.description ?? "")")) {
                     Text("\(article.description ?? "")")
                 }
-            }.navigationBarTitle("Top Headlines")
+            }
+            .navigationBarTitle("Top Headlines")
+            .navigationBarItems(trailing: Button(action: {
+                withAnimation {
+                    self.showToast.toggle()
+                }
+            }){
+                Text("Toggle toast")
+            })
         }.onAppear {
             self.viewModel.onAppear = ()
-        }
+        }.toast(isShowing: $showToast, text: Text("Hello toast!"))
     }
 }
 

@@ -8,6 +8,11 @@
 
 import Foundation
 
+
+// This is `O` of SOLID principal
+// Entities should be closed for motification
+// which is done by let but open for extension
+// which we can do by `extension`
 struct Source: Identifiable {
     let id: String?
     let name: String?
