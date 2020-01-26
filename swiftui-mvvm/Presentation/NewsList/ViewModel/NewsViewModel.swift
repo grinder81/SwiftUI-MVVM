@@ -26,10 +26,10 @@ final class NewsViewModel: ObservableObject {
     init(fetchUseCase: FetchTopHeadlineQueriesUseCase = DefaultFetchTopHeadlineQueriesUseCase(
         headlineRepo: DefaultTopHeadlineRepository())) {
         self.fetchTopHeadlineQueryUseCase = fetchUseCase
-        mappingOutputs()
+        bindOutputs()
     }
     
-    private func mappingOutputs() {
+    private func bindOutputs() {
         Publishers.CombineLatest($countryDidChange, $onAppear.dropFirst())
             .map { $0.0 }
             .flatMap { [fetchTopHeadlineQueryUseCase] country -> AnyPublisher<ArticlePage, Never> in

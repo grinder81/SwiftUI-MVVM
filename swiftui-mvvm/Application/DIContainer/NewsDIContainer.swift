@@ -10,23 +10,23 @@ import Foundation
 import SwiftUI
 
 // MARK: - UseCase protocol
-protocol NewsDIUseCaseType {
+protocol NewsDIUseCaseFactory {
     func makeFetchTopHeadlineQueriesUseCase() -> FetchTopHeadlineQueriesUseCase
 }
 
 // MARK: - Repositories protocol
-protocol NewsDIRepositoryType {
+protocol NewsDIRepositoryFactory {
     func makeTopHeadlineRepositories() -> TopHeadlineRepository
 }
 
 // MARK: - Vews protocol
 // FIXME: Returning concret type. You can't use ObservedObject or Observale in non-class type
-protocol NewsDIViewsType {
+protocol NewsDIViewsFactory {
     func makeNewsView() -> AnyView
     func makeNewsViewModifier() -> NewsViewModifier
 }
 
-typealias NewsDIContainerType = NewsDIUseCaseType & NewsDIRepositoryType & NewsDIViewsType
+typealias NewsDIContainerType = NewsDIUseCaseFactory & NewsDIRepositoryFactory & NewsDIViewsFactory
 
 
 final class NewsDIContainer: NewsDIContainerType {
